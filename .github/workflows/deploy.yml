@@ -44,6 +44,17 @@ jobs:
           name: production-files
           path: ./dist
 
+      - name: Setup Jekyll
+        uses: actions/setup-ruby@v2
+        with:
+          ruby-version: "2.0" # Adjust version if needed
+
+      - name: Install Jekyll
+        run: gem install jekyll bundler
+
+      - name: Build Jekyll site
+        run: bundle exec jekyll build
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:

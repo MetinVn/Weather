@@ -44,10 +44,10 @@ jobs:
           name: production-files
           path: ./dist
 
-      - name: Setup Jekyll
+      - name: Setup Ruby
         uses: actions/setup-ruby@v2
         with:
-          ruby-version: "2.0" # Adjust version if needed
+          ruby-version: "3.0" # Adjust version if needed
 
       - name: Install Jekyll
         run: gem install jekyll bundler

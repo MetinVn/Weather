@@ -45,7 +45,7 @@ jobs:
           path: ./dist
 
       - name: Setup Ruby
-        uses: actions/setup-ruby@v2
+        uses: actions/setup-ruby@v3
         with:
           ruby-version: "3.0" # Adjust version if needed
 

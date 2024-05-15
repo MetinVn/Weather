@@ -1,7 +1,6 @@
 ---
-
-🌤️ Weather App
-
+title: "Weather App"
+description: "A Weather App built using React and Vite, providing real-time weather data and a user-friendly interface."
 ---
 
 This Weather App is built using React and Vite, providing a fast and efficient development environment with Hot Module Replacement (HMR) for quick updates. It utilizes modern tools like @vitejs/plugin-react and @vitejs/plugin-react-swc to enhance the development experience.

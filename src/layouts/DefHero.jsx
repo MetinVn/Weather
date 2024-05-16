@@ -50,7 +50,7 @@ export default function Hero() {
       try {
         axios
           .get(
-            `http://api.weatherapi.com/v1/search.json?key=${apiKey}&q=${inputValue}`
+            `https://api.weatherapi.com/v1/search.json?key=${apiKey}&q=${inputValue}`
           )
           .then((data) => {
             setLoading(false);
@@ -87,7 +87,7 @@ export default function Hero() {
       prevNameRef.current = name;
       axios
         .get(
-          `http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${name}&aqi=yes`
+          `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${name}&aqi=yes`
         )
         .then((data) => {
           setTimeout(() => {
@@ -133,7 +133,7 @@ export default function Hero() {
   const fetchWeatherData = async (name) => {
     try {
       const response = await axios.get(
-        `http://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${name}&days=12&aqi=no&alerts=no`
+        `https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${name}&days=12&aqi=no&alerts=no`
       );
       if (!response.data) {
         throw new Error("No data received");
